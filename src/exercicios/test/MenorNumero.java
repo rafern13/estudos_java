@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.test;
 
 public class MenorNumero {
     public static void main(String[] args) {

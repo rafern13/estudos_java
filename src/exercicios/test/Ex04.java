@@ -1,6 +1,6 @@
-package exercicios;
+package exercicios.test;
 
-public class AnteriorSucessor {
+public class Ex04 {
     public static void main(String[] args) {
         int numero = 25;
         System.out.println("O sucessor é "+(numero+1));

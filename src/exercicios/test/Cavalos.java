@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.test;
 
 public class Cavalos {
     public static void main(String[] args){
