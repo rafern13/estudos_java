@@ -11,7 +11,6 @@ public class Banco {
     public Banco(String nome, ContaBancaria[] conta){
         this(nome);
         this.contasRegistradas = conta;
-
     }
 
     public void imprimeDados(){
@@ -27,5 +26,9 @@ public class Banco {
 
     public void setNome(String nome){
         this.nome = nome;
+    }
+
+    public String getNome(){
+        return nome;
     }
 }

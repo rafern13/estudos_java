@@ -22,8 +22,7 @@ public class ContaBancaria {
     public String toString(){
         return "--- DADOS BANCÁRIOS ---\nNome: "+this.nome+
                 "\nNº da conta: "+this.numeroConta+
-                "\nSaldo: R$"+this.saldo+
-                "\n";
+                "\nSaldo: R$"+this.saldo;
     }
 
     public void depositarNaConta(double valor) {
@@ -49,6 +48,7 @@ public class ContaBancaria {
 
     public double getSaldo(){
         return saldo;
+
     }
 
     public int getNumeroConta(){

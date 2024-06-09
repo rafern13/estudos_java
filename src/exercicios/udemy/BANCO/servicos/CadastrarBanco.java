@@ -22,21 +22,15 @@ public class CadastrarBanco {
         this.conta = conta;
     }
 
-    public void cadastrarBanco(){
-        System.out.println("CADASTRANDO NOVO BANCO.");
-        System.out.print("Nome do banco: ");
-        String nomeBanco = entrada.nextLine();
-        this.banco = new Banco(nomeBanco);
-    }
 
     public void imprimeDados(){
         if (banco == null){
             System.out.println("Nenhum banco cadastrado");
+            System.out.println(conta);
         }else{
-            System.out.println(banco);
+            System.out.println(" - - - - - "+banco.getNome()+" - - - - -");
             System.out.println(conta);
         }
-        System.out.println(conta);
     }
 
     public void cadastrarContaBancariaPessoal(){
@@ -47,17 +41,25 @@ public class CadastrarBanco {
         int numeroConta = entrada.nextInt();
         System.out.print("Deseja fazer deposito inicial?\n1 - SIM\n0 - NÃO\n");
         int checagem = entrada.nextInt();
-        if (checagem == 0){
-            this.conta = new ContaBancaria(nomePessoa, numeroConta);
-            return;
-        }else if(checagem == 1){
+
+        entrada.nextLine();//limpando buffer
+
+        if (checagem == 1){
             System.out.print("Deposito inicial: ");
             double depositoInicial = entrada.nextDouble();
-            this.conta = new ContaBancaria(nomePessoa, numeroConta, depositoInicial);
-            return;
-        }else{
-            System.out.println("Digitou valor invalido, o usuario sera cadastrado sem deposito inicial por padrao.");
-        }
 
+            entrada.nextLine();//limpando buffer
+
+            this.conta = new ContaBancaria(nomePessoa, numeroConta, depositoInicial);
+            System.out.println();
+        }else{
+            this.conta = new ContaBancaria(nomePessoa, numeroConta);
+            System.out.println();
+        }
+    }
+    public void cadastrarBanco(){
+        System.out.print("\nCADASTRANDO NOVO BANCO.\nNome do banco: ");
+        String nomeBanco1 = entrada.nextLine();
+        this.banco = new Banco(nomeBanco1);
     }
 }
