@@ -1,11 +1,11 @@
 package exercicios.udemy.BANCO.test;
 
-import exercicios.udemy.BANCO.servicos.CadastrarBanco;
+import exercicios.udemy.BANCO.servicos.CadastroBanco;
 
 public class CadastrandoTest01 {
     public static void main(String[] args) {
-        CadastrarBanco rafael = new CadastrarBanco();
-        CadastrarBanco nicolas = new CadastrarBanco();
+        CadastroBanco rafael = new CadastroBanco();
+        CadastroBanco nicolas = new CadastroBanco();
 
         cadastrarUsuario(rafael);
         cadastrarUsuario(nicolas);
@@ -13,9 +13,14 @@ public class CadastrandoTest01 {
         rafael.imprimeDados();
         nicolas.imprimeDados();
 
+        rafael.depositarNaConta(300);
+        rafael.sacarDaConta(500);
+
+        rafael.imprimeDados();
+        nicolas.imprimeDados();
     }
 
-    public static void cadastrarUsuario(CadastrarBanco usuario) {
+    public static void cadastrarUsuario(CadastroBanco usuario) {
         usuario.cadastrarContaBancariaPessoal();
         usuario.cadastrarBanco();
         limpaConsole();

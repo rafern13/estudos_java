@@ -4,22 +4,22 @@ import exercicios.udemy.BANCO.dominio.Banco;
 import exercicios.udemy.BANCO.dominio.ContaBancaria;
 import java.util.Scanner;
 
-public class CadastrarBanco {
-    private Scanner entrada = new Scanner(System.in);
+public class CadastroBanco {
+    private final Scanner entrada = new Scanner(System.in);
     private Banco banco;
     private ContaBancaria conta;
 
-    public CadastrarBanco(){
+    public CadastroBanco(){
 
     }
 
-    public CadastrarBanco(ContaBancaria conta){
+    public CadastroBanco(ContaBancaria conta){
         this.conta = conta;
     }
 
-    public CadastrarBanco(ContaBancaria conta, Banco banco){
+    public CadastroBanco(ContaBancaria conta, Banco banco){
         this(conta);
-        this.conta = conta;
+        this.banco = banco;
     }
 
 
@@ -52,14 +52,25 @@ public class CadastrarBanco {
 
             this.conta = new ContaBancaria(nomePessoa, numeroConta, depositoInicial);
             System.out.println();
+
         }else{
+
             this.conta = new ContaBancaria(nomePessoa, numeroConta);
             System.out.println();
+
         }
     }
     public void cadastrarBanco(){
         System.out.print("\nCADASTRANDO NOVO BANCO.\nNome do banco: ");
         String nomeBanco1 = entrada.nextLine();
         this.banco = new Banco(nomeBanco1);
+    }
+
+    public void sacarDaConta(double valor){
+        this.conta.sacarDaConta(valor);
+    }
+
+    public void depositarNaConta(double valor){
+        this.conta.depositarNaConta(valor);
     }
 }
