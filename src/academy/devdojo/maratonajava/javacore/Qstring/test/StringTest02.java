@@ -25,8 +25,8 @@ public class StringTest02 {
 
         // o string.substring(a, b) retorna substring x entre a <= x < b
         //ou seja, ele pega a partir de a e para antes do b, sem incluí-lo
-        // tambem da para enxergar como segmento nao inclusivo de uma reta
-        //a-------------|b
+        // tambem da para enxergar como um segmento de reta
+        //|a-------------|b------------|c
         System.out.println(numeros.substring(0, 2)); // returns "01"
 
         String nome2 = "      LUFFY       ";
