@@ -16,7 +16,6 @@ public class NumberFormatTest02 {
         nfa[3] = NumberFormat.getCurrencyInstance(localeIT);
         double valor = 1000.2130;
         for (NumberFormat numberFormat: nfa){
-            System.out.println(numberFormat.getMaximumFractionDigits());
             System.out.println(numberFormat.format(valor));
         }
 
