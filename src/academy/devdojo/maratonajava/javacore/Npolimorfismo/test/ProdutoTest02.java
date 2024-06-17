@@ -7,7 +7,7 @@ import academy.devdojo.maratonajava.javacore.Npolimorfismo.dominio.Tomate;
 public class ProdutoTest02 {
     public static void main(String[] args) {
         Produto tomate = new Tomate("Americano", 20);
-        Produto computador = new Computador("Aspire 5", 2800);
+        Produto computador = new Computador("Aspire 5", 3500);
 
         System.out.println(tomate.getNome());
         System.out.println(tomate.getValor());
