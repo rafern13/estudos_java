@@ -8,6 +8,7 @@ import java.nio.file.attribute.DosFileAttributeView;
 import java.nio.file.attribute.DosFileAttributes;
 
 public class DosFileAttributesTest01 {
+    // 'dos' vem de windows
     public static void main(String[] args) throws IOException {
         Path path = Paths.get("pasta/teste.txt");
         if(Files.notExists(path)) Files.createFile(path);
