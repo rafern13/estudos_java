@@ -27,7 +27,6 @@ public class Aluno implements Serializable {
     na mesma ordem em que você escreveu. Bastante manual eu diria
      */
 
-    @Serial
     private void writeObject(ObjectOutputStream oos) {
         try {
 
@@ -39,7 +38,6 @@ public class Aluno implements Serializable {
         }
     }
 
-    @Serial
     private void readObject(ObjectInputStream ois) {
         try {
 
