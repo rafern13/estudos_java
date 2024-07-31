@@ -1,4 +1,4 @@
-package academy.devdojo.maratonajava.javacore.Ycolecoes.test.dominio;
+package academy.devdojo.maratonajava.javacore.Ycolecoes.dominio;
 
 public class Smartphone {
     private String serialNumber;
@@ -26,6 +26,17 @@ public class Smartphone {
         if(this.getClass() != obj.getClass()) return false;
         Smartphone smartphone = (Smartphone) obj;
         return serialNumber != null && serialNumber.equals(smartphone.serialNumber);
+    }
+
+    /*
+    REGRINHAS:
+    -se x.equals(y) == true, então x.hashCode() == y.hashCode()
+    -se y.hashCode() ==  x.hashCode(), nao necessariamente x.equals(y) ou y.equals(x) == true
+    -se y.hashCode() != x.hashCode(), entao x.equals(y) deverá ser false.
+     */
+    @Override
+    public int hashCode() {
+        return serialNumber == null ? 0 : this.serialNumber.hashCode();
     }
 
     public String getSerialNumber() {
