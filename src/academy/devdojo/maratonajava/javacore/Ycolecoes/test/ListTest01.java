@@ -13,25 +13,35 @@ public class ListTest01 {
 //        for (Object  nome: nomes) {
 //            System.out.println(nome);
 //        }
+        /*
 
-        //depois, na 1.5, adicionaram o generics (sintaxe diamante ali)
-        // e forçaram a determinação do tipo na variável de referência da lista em tempo de compilação, para que nao hajam erros
-        // also, arraylists sao dinamicos, logo eles ajustam seu tamanho conforme o necessario, sendo o valor inicial padrao 16 espaços de vetor
-        List<String> nomes = new ArrayList(16);//parametro dentro de ArrayList é o tamanho inicial, o metodo é sobrecarregado
+        depois, na 1.5, adicionaram o generics (sintaxe diamante ali)
+        e forçaram a determinação do tipo na variável de referência da lista em tempo de compilação, para que nao hajam erros
+        also, arraylists sao dinamicos, logo eles ajustam seu tamanho conforme o necessario, sendo o valor inicial padrao 16 espaços de vetor
+        so pode criar list usando um objeto dentro doo < >, nao pode ser tipo primitivo (nesse caso vc pode usar os wrappers substituindo os primitivos)
+        coleçoes nao aceitam tipos primitivos pois elas trabalham com equals e hashcode
+        equals e hashcode são herdados por todas as classes ja que eles sao metodos de Object, que é pai de todas as classes
+        e como os tipos primitivos nao sao classes, eles nao têm hashcode e equals, logo nao há como usá-los nas lists
+         */
 
-        //o ideal em geral é usar no lado esquerdo da declaração do array, usar um tipo de referencia mais generico
+        //o ideal em geral é usar no lado esquerdo da declaração do array usar um tipo de referencia mais generico
         //nesse caso, o List que é uma interface. (Nao é muito comum ja tipar como ArrayList mesmo que voce va usar um arrayList)
 
-        nomes.add("William");
-        nomes.add("DevDojo Academy");
-
         //arrayList é do tipo ORDENADO
+
+        List<String> nomes = new ArrayList(16);//parametro dentro de ArrayList é o tamanho inicial, o metodo é sobrecarregado
+        List<String> nomes2  = new ArrayList(16);
+        nomes.add("William");
+        nomes.add("DevDojo ");
+        nomes2.add("Suane");
+        nomes2.add("Academy");
+//        System.out.println(nomes.remove("william"));//retorna um booleano dizendo se removeu ou nn da lista
+        nomes.addAll(nomes2);
 
         for (String  nome: nomes) {
             System.out.println(nome);
         }
 
-        nomes.add("Suane ");
         System.out.println("--------------");
 
         //usando for indexado...

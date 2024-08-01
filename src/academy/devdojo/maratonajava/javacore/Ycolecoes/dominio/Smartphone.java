@@ -9,16 +9,24 @@ public class Smartphone {
         this.marca = marca;
     }
 
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "serialNumber='" + serialNumber + '\'' +
+                ", marca='" + marca + '\'' +
+                '}';
+    }
+
     /*
-    REGRINHAS:
+        REGRINHAS:
 
-    -REFLEXIVO: x.equals(x) == true, para tudo que for diferente de null
-    -SIMÉTRICO: para x e y != null, se x.equals(y) == true, logo y.equals(x) == true tambem.
-    -TRANSITIVIDADE: para x, y, z != null, se x.equals(y) == true, e y.equals(z) == true, entao x.equals(z) == true da mesma forma
-    -CONSISTENTE: x.equals(x) sempre retorna true se x != null
-    -para x != null, x.equals(null) tem que retornar false
+        -REFLEXIVO: x.equals(x) == true, para tudo que for diferente de null
+        -SIMÉTRICO: para x e y != null, se x.equals(y) == true, logo y.equals(x) == true tambem.
+        -TRANSITIVIDADE: para x, y, z != null, se x.equals(y) == true, e y.equals(z) == true, entao x.equals(z) == true da mesma forma
+        -CONSISTENTE: x.equals(x) sempre retorna true se x != null
+        -para x != null, x.equals(null) tem que retornar false
 
-     */
+         */
     @Override
     public boolean equals(Object obj) {
         if (obj == null) return false;
