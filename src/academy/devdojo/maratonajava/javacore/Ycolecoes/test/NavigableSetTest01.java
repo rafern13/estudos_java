@@ -42,7 +42,7 @@ public class NavigableSetTest01 {
         NavigableSet<Smartphone> set = new TreeSet<>(new SmartphoneMarcaComparator());
         Smartphone smartphone = new Smartphone("123", "Nokia");
         set.add(smartphone);
-        NavigableSet<Manga> mangas = new TreeSet<>(new MangaPrecoComparator());//TreeSet sempre faz a ordenação usando o compare to sobrescrito da interface Comparable da classe original
+        NavigableSet<Manga> mangas = new TreeSet<>(new MangaPrecoComparator());//TreeSet sempre faz a ordenação usando o compareTo sobrescrito da interface Comparable da classe original
         mangas.add(new Manga(5L, "Hellsing Ultimate", 19.9, 0));
         mangas.add(new Manga(1L, "Berserk", 9.5, 5));
         mangas.add(new Manga(4L, "Pokemon", 3.2, 0));
