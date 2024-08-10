@@ -8,6 +8,7 @@ public class OuterClassesTest01 {
    especialmente quando uma classe so é usada por outra. voce pode deixar ela interna que diminui a complexidade do codigo
     */
 
+    //classes aninhadas ou nested classes
     class Inner {//classe interna tem acesso aos atributos e metodos da classe externa bebeee
         public void printAlterClassAttribute(){
             System.out.println(name);
