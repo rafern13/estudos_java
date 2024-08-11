@@ -22,7 +22,7 @@ public class ComportamentoPorParametroTest03 {
             método test();
         2 - agora, coloca o ObjectPredicate como segundo parametro da função de filtro.
             é tipo passar comparators como parametro, provavelmente essas funçoes de filtro
-            sempre vao sobrecarregadas kk
+            sempre vao ser sobrecarregadas kk
         3 - agora, como voce ta passando um List<> ou qlqr outra collection de objetos para filtrar,
         dentro da iteração sobre o vetor, chama o metodo test() da variável local de ObjectPredicate sobre o
         Object o que foi passado como primeiro parametro da função;
@@ -35,9 +35,6 @@ public class ComportamentoPorParametroTest03 {
         5 - vc tbm pode usar programação funcional e trocar todo esse trambolho de predicate por lambda kkkkj
 
         GENIAL, SIMPLESMENTE
-
-
-
          */
 
         List<Integer> nums = List.of(1,2,3,4,5,6,7,8,9,10);
